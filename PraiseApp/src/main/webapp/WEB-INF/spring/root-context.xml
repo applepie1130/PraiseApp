@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+						http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+						http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+						http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd		
+						http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- [S] 정적자원관리 -->
+	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="60" />
+	<!-- [E] 정적자원관리 -->
+	
+	<!-- [S] Configurer config -->
+	<context:property-placeholder location="/WEB-INF/spring/common.properties" />
+    <!-- [E] Configurer config -->
+	
+	<!-- [S] SQL DataSource config -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+        <property name="driverClass" value="${jdbc.driverClassName}"></property>
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+      <property name="password" value="${jdbc.password}" />
+    </bean>
+    <!-- [E] SQL DataSource config -->
+    
+	<!-- [S] SQL SessionFactory Config -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation" value="/WEB-INF/mybatis/mybatis-config.xml"></property>
+    </bean>
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg  ref="sqlSessionFactory"></constructor-arg>
+    </bean>
+    <!-- [E] SQL SessionFactory Config -->
+    
+    <!-- [S] Transaction config -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+    <!-- [E] Transaction config -->
+    
+    <!-- [S] RestTemplate -->
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="requestFactory">
+				<bean class="org.springframework.http.client.SimpleClientHttpRequestFactory">
+				<property name="connectTimeout" value="3000" />
+				<property name="readTimeout" value="3000" />
+			</bean>
+		</property>
+		<property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+	<!-- [E] RestTemplate -->
+	
+	<!-- [S] Spring Mail Sender -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.host}" />
+		<property name="port" value="${mail.port}" />
+		<property name="username" value="${mail.username}" />
+		<property name="password" value="${mail.password}" />
+		<property name="javaMailProperties">
+			<props>
+				<!-- <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop> -->
+                <prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- [E] Spring Mail Sender -->
+	
+	<!-- [S] File Upload Conf -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize">
+			<value>102400000</value>
+		</property>
+	</bean>
+	<!-- [E] File Upload Conf -->
+	
+	<!-- [S] Social Facebook, Twitter Conf -->
+	<bean id="connectionFactoryLocator"
+		class="org.springframework.social.connect.support.ConnectionFactoryRegistry">
+		<property name="connectionFactories">
+			<list>
+				<bean
+					class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+					<constructor-arg value="${spring.social.facebook.appId}" />
+					<constructor-arg value="${spring.social.facebook.appSecret}" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!-- [E] Social Facebook, Twitter Conf -->
+</beans>

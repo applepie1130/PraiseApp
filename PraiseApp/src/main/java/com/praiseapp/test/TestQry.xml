@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userQry" >
+	<!-- selectUserList -->
+    <select id ="selectUserList" parameterType="java.util.Map" resultType= "java.util.Map">
+		select a.user_sq									as user_sq,
+			   a.user_id									as user_id,
+			   a.user_nm									as user_nm,
+			   a.addr1										as addr1,
+			   a.addr2										as addr2,
+			   a.zipcode									as zipcode,
+			   a.phone										as phone,
+			   date_format(a.insert_dt, '%Y%m%d%H%i%s')		as insert_dt,
+			   date_format(a.update_dt, '%Y%m%d%H%i%s')		as update_dt			   
+		  from myapp.user_info a
+		 where 1 = 1
+		<if test="user_nm != null">
+			and a.user_nm like concat('%', #{user_nm}, '%')
+		</if>
+		
+		<if test="user_id != null">
+			and a.user_id = #{user_id}
+		</if>
+		 order by a.user_sq desc
+    </select>
+    
+    <!-- insertUserInfo -->
+    <insert id ="insertUserInfo" parameterType="java.util.Map">
+    	insert into myapp.user_info (
+            user_id,
+            user_nm,
+            addr1,
+            addr2,
+            zipcode,
+            phone,
+            insert_dt,
+            update_dt
+        ) values(
+            #{user_id},
+            #{user_nm},
+            #{addr1},
+            #{addr2},
+            #{zipcode},
+            #{phone},
+            now(),
+            now()
+        )
+    </insert>
+    
+    <!-- updateUserInfo -->
+    <update id ="updateUserInfo" parameterType="java.util.Map">
+		update myapp.user_info 
+		   set user_id = #{user_id}, 
+			   user_nm = #{user_nm},
+			   addr1 = #{addr1}, 
+			   addr2 = #{addr2}, 
+			   zipcode = #{zipcode}, 
+			   phone = #{phone},
+			   update_dt = now()
+	     where user_sq = #{user_sq} 
+    </update>
+    
+    <!-- deleteUserInfo -->
+    <update id ="deleteUserInfo" parameterType="java.util.Map">
+		delete from myapp.user_info 
+	     where user_sq = #{user_sq} 
+    </update>
+</mapper>
