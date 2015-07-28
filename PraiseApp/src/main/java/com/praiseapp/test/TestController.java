@@ -58,7 +58,7 @@ public class TestController extends CommonController {
 	 * @Create	: 2015년 05월 16일 
 	 * @stereotype Action
 	 */
-	@RequestMapping(value = {"", "/"})
+//	@RequestMapping(value = {"", "/"})
 	public String userView(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
