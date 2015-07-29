@@ -14,6 +14,12 @@ public class CommonConfig {
 	private String serviceShutDownStartDt;
 	@Value("${service.shutDownEndDt}")
 	private String serviceShutDownEndDt;
+	@Value("${server.ip}")
+	private String serverIp;
+	@Value("${server.port}")
+	private String serverPort;
+	@Value("${server.domain}")
+	private String serverDomain;
 	
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
@@ -26,11 +32,16 @@ public class CommonConfig {
 	public String getServiceShutDownStartDt() {
 		return serviceShutDownStartDt;
 	}
-
-	/**
-	 * @return the serviceShutDownEndDt
-	 */
 	public String getServiceShutDownEndDt() {
 		return serviceShutDownEndDt;
+	}
+	public String getServerIp() {
+		return serverIp;
+	}
+	public String getServerPort() {
+		return serverPort;
+	}
+	public String getServerDomain() {
+		return serverDomain;
 	}
 }

@@ -24,17 +24,17 @@
   <!-- [S] Error Page -->
   <error-page>
 	<error-code>400</error-code>
-	<location>/test/</location>
+	<location>/</location>
   </error-page>
   
   <error-page>
 	<error-code>403</error-code>
-	<location>/test/</location>
+	<location>/</location>
   </error-page>
   
   <error-page>
 	<error-code>404</error-code>
-	<location>/test/</location>
+	<location>/</location>
   </error-page>
   <!-- [E] Error Page --> 
   

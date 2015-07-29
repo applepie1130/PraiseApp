@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="userQry" >
+<mapper namespace="mainQry" >
 	<!-- selectUserList -->
-    <select id ="selectUserList" parameterType="java.util.Map" resultType= "java.util.Map">
+    <select id ="selectPageList" parameterType="java.util.Map" resultType= "java.util.Map">
 		select a.user_sq									as user_sq,
 			   a.user_id									as user_id,
 			   a.user_nm									as user_nm,
@@ -23,46 +23,4 @@
 		</if>
 		 order by a.user_sq desc
     </select>
-    
-    <!-- insertUserInfo -->
-    <insert id ="insertUserInfo" parameterType="java.util.Map">
-    	insert into myapp.user_info (
-            user_id,
-            user_nm,
-            addr1,
-            addr2,
-            zipcode,
-            phone,
-            insert_dt,
-            update_dt
-        ) values(
-            #{user_id},
-            #{user_nm},
-            #{addr1},
-            #{addr2},
-            #{zipcode},
-            #{phone},
-            now(),
-            now()
-        )
-    </insert>
-    
-    <!-- updateUserInfo -->
-    <update id ="updateUserInfo" parameterType="java.util.Map">
-		update myapp.user_info 
-		   set user_id = #{user_id}, 
-			   user_nm = #{user_nm},
-			   addr1 = #{addr1}, 
-			   addr2 = #{addr2}, 
-			   zipcode = #{zipcode}, 
-			   phone = #{phone},
-			   update_dt = now()
-	     where user_sq = #{user_sq} 
-    </update>
-    
-    <!-- deleteUserInfo -->
-    <update id ="deleteUserInfo" parameterType="java.util.Map">
-		delete from myapp.user_info 
-	     where user_sq = #{user_sq} 
-    </update>
 </mapper>

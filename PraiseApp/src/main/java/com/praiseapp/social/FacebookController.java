@@ -62,7 +62,7 @@ public class FacebookController extends CommonService {
 		connectionFactory = (FacebookConnectionFactory) factoryLocator.getConnectionFactory(Facebook.class);
 		auth2Operations = connectionFactory.getOAuthOperations();
 		OAuth2Parameters parameters = new OAuth2Parameters();
-		String sRedirectUrl = "http://58.232.121.39:8080/facebook/accessResult";
+		String sRedirectUrl = commonConfig.getServerDomain() + "/facebook/accessResult";
 		
 		parameters.setScope("email, user_about_me, user_birthday, user_hometown, user_website, read_stream, read_friendlists");
 		parameters.setRedirectUri(sRedirectUrl);

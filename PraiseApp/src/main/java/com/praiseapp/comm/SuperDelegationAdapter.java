@@ -19,6 +19,9 @@ public class SuperDelegationAdapter {
 	@Autowired
 	public GLIO GLIO;
 	
+	@Autowired (required=false)
+	public CommonConfig commonConfig;
+	
 	private static final Logger logger = LoggerFactory.getLogger(SuperDelegationAdapter.class);
 	
 	/**
