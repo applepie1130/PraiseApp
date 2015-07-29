@@ -69,7 +69,7 @@ public class TestController extends CommonController {
 		fileSvc.writeFileToJSONList(sFile, findUserList);
 		
 		// redirect
-		return "redirect:/test/index";
+		return "redirect:/main/index";
 	}
 	
 	/**
@@ -88,7 +88,8 @@ public class TestController extends CommonController {
 		
 		model.addAttribute("rData", findUserList);
 		
-		return "/test/index";
+//		return "/test/index";
+		return "redirect:/main/index";
 	}
 	
 	/**
