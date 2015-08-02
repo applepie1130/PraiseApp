@@ -3,144 +3,91 @@
 <!-- #*	[E] Common Header *# -->
 
 <body>
-	<div class="wrapper">
-		<div class="box">
-			<div class="row	row-offcanvas row-offcanvas-left">
-				<!-- sidebar -->
-				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-					<ul class="nav">
-						<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-					</ul>
-					<ul class="nav hidden-xs" id="lg-menu">
-						<li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Featured</a></li>
-						<li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Stories</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-paperclip"></i>Saved</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-refresh"></i>Refresh</a></li>
-					</ul>
-					<ul class="list-unstyled hidden-xs" id="sidebar-footer">
-						<li><a href="http://www.bootply.com"><h3>Bootstrap</h3> <i class="glyphicon	glyphicon-heart-empty"></i> Bootply</a></li>
-					</ul>
-					<!-- tiny only nav-->
-					<ul class="nav visible-xs" id="xs-menu">
-						<li><a href="#featured" class="text-center"><i class="glyphicon	glyphicon-list-alt"></i></a></li>
-						<li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
-						<li><a href="#" class="text-center"><i class="glyphicon	glyphicon-paperclip"></i></a></li>
-						<li><a href="#" class="text-center"><i class="glyphicon	glyphicon-refresh"></i></a></li>
-					</ul>
-				</div>
-				<!-- /sidebar -->
-				
-				<!-- main right	col -->
-				<div class="column col-sm-10 col-xs-11" id="main">
-					<!-- #* [S] Snb *# -->
-					#parse( "/common/snb.vm" )
-					<!-- #* [E] Snb *# -->
-					
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="panel panel-primary">
-								<div class="panel-heading">
-									<h3 class="panel-title">기능 테스트</h3>
-								</div>
-							
-								<div class="panel-body">
-									<div class="btn-group" role="group" aria-label="...">
-										<button type="button" class="btn btn-default" id="btn_Save">저장</button>
-										<button type="button" class="btn btn-default" id="btn_Find">조회</button>
-										<button type="button" class="btn btn-default" id="btn_Page">페이지전환</button>
-										<button type="button" class="btn btn-default" id="btn_PageOpenPop">팝업페이지전환</button>
-									</div>
-									<br/>
-									<div class="btn-group" role="group" aria-label="...">
-										<button type="button" class="btn btn-default" id="btn_RestTmpToJson">JSON파싱</button>
-										<button type="button" class="btn btn-default" id="btn_RestTmpToXml">XML파싱</button>
-										<button type="button" class="btn btn-default" id="btn_NaverRank">네이버실검순위:크롤링</button>
-									</div>
-									<br/>
-									<div class="btn-group" role="group" aria-label="...">
-										<button type="button" class="btn btn-default" id="btn_SendMail">테스트메일발송</button>
-										<button type="button" class="btn btn-default" id="btn_FindConfig">설정파일가져오기</button>
-										<button type="button" class="btn btn-default" id="btn_FindException">예외처리테스트</button>
-										<button type="button" class="btn btn-default" id="btn_SaveCookie">쿠키생성</button>
-									</div>
-									<br/>
-									<div class="btn-group" role="group" aria-label="...">
-										<button type="button" class="btn btn-default" id="btn_LoginFacebook">페이스북으로 로그인</button>
-										<button type="button" class="btn btn-default" id="btn_LoginTwitter">트위터으로 로그인</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-lg-6">	
-							<div class="panel panel-info">
-								<div class="panel-heading">
-									<h3 class="panel-title">파일 업로드 테스트</h3>
-								</div>
-								<div class="panel-body">
-									<form id="frm_file" enctype="multipart/form-data" method="POST">
-										<input type="text" name="inp_name" value=""/>
-										<button type="button" class="btn btn-default" id="btn_SaveFileUpload">업로드</button>
-										<input type="file" name="inp_file1" id="inp_file1" />
-										<input type="file" name="inp_file2" id="inp_file2" />
-									</form>
-								</div>
+	<!-- #*	[S] Common Snb *# -->
+	#parse( "/common/snb.vm" )
+	<!-- #*	[E] Common Snb *# -->
+	
+	<!-- #*	[S] Container *# -->
+	<div class="container-fluid">
+		<div class="row row-offcanvas row-offcanvas-left">
+			
+			<!-- #*	[S] Common Sidebar *# -->
+			#parse( "/common/sidebar.vm" )
+			<!-- #*	[E] Common Sidebar *# -->
+			
+			<div class="col-sm-9 col-md-10 main">
+			<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
+				<li><i class="glyphicon glyphicon-list" style="margin-right: 5px;"></i> <a href="#" style="color:#999;">장 순</a></li>
+				<li class="active" style="color:#555;"></i>제목 순</li>
+			</ol>
+			
+				<div class="col-sm-12">
+					<div class="panel panel-default">
+						<div class="panel-heading"><h4>ㄱ</h4></div>
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#" class="list-group-item">가가가가</a>
+								<a href="#" class="list-group-item">가가가가</a>
+								<a href="#" class="list-group-item">가가가가</a>
 							</div>
 						</div>
 					</div>
 					
-					
-					
-					
-					
-					
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--post modal-->
-	<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					Update Status
-				</div>
-				<div class="modal-body">
-					<form class="form center-block">
-						<div class="form-group">
-							<textarea class="form-control input-lg" autofocus="" placeholder="What do you want to share?"></textarea>
+					<div class="panel panel-default">
+						<div class="panel-heading"><h4>ㄴ</h4></div>
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#" class="list-group-item">나나나</a>
+								<a href="#" class="list-group-item">나나나</a>
+								<a href="#" class="list-group-item">나나나</a>
+							</div>
 						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<div>
-						<button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
-						<ul class="pull-left list-inline">
-							<li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
-							<li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
-							<li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
-						</ul>
 					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading"><h4>ㄷ</h4></div>
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#" class="list-group-item">다다다</a>
+								<a href="#" class="list-group-item">다다다</a>
+								<a href="#" class="list-group-item">다다다</a>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>		
+	<!-- #*	[E] Container *# -->
+	
+	<footer>
+		<div class="pull-right">
+			<div class="glyphicon glyphicon-copyright-mark"></div> 
+			2015 Copyright Sung-Jun.
+		</div>
+	</footer>
 	<script type="text/javascript">
 		"use strict";
 		/* #* Velocity 주석 in Javascript *# */
 		(function(jQuery) {
 			/* #* [S] Document Ready *# */
-			jQuery(function() {	
+			jQuery(function() {
+				
 				jQuery('[data-toggle=offcanvas]').click(function() {
-					jQuery(this).toggleClass('visible-xs text-center');
-					jQuery(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
 					jQuery('.row-offcanvas').toggleClass('active');
-					jQuery('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-					jQuery('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-					jQuery('#btnShow').toggle();
-				});				
+				});
+				
+				jQuery(window).scroll(function(){
+					console.log("scroll");
+					if  (jQuery(window).scrollTop() >= jQuery(document).height() - jQuery(window).height()) {
+						fncLoadingPages();
+					}
+				});
+	
+				function fncLoadingPages () {
+					console.log("page loading ...");
+				}
 			});
 			/* #* [E] Document Ready *# */
 		}(jQuery));
