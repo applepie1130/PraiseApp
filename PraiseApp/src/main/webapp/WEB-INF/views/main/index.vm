@@ -26,9 +26,9 @@
 						<div class="panel-heading"><h4>ㄱ</h4></div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="#" class="list-group-item">가가가가</a>
-								<a href="#" class="list-group-item">가가가가</a>
-								<a href="#" class="list-group-item">가가가가</a>
+								<a href="/view/" class="list-group-item">가가가가</a>
+								<a href="/view/" class="list-group-item">가가가가</a>
+								<a href="/view/" class="list-group-item">가가가가</a>
 							</div>
 						</div>
 					</div>
@@ -37,9 +37,9 @@
 						<div class="panel-heading"><h4>ㄴ</h4></div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="#" class="list-group-item">나나나</a>
-								<a href="#" class="list-group-item">나나나</a>
-								<a href="#" class="list-group-item">나나나</a>
+								<a href="/view/" class="list-group-item">나나나</a>
+								<a href="/view/" class="list-group-item">나나나</a>
+								<a href="/view/" class="list-group-item">나나나</a>
 							</div>
 						</div>
 					</div>
@@ -48,9 +48,9 @@
 						<div class="panel-heading"><h4>ㄷ</h4></div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="#" class="list-group-item">다다다</a>
-								<a href="#" class="list-group-item">다다다</a>
-								<a href="#" class="list-group-item">다다다</a>
+								<a href="/view/" class="list-group-item">다다다</a>
+								<a href="/view/" class="list-group-item">다다다</a>
+								<a href="/view/" class="list-group-item">다다다</a>
 							</div>
 						</div>
 					</div>
@@ -74,19 +74,20 @@
 			/* #* [S] Document Ready *# */
 			jQuery(function() {
 				
-				jQuery('[data-toggle=offcanvas]').click(function() {
-					jQuery('.row-offcanvas').toggleClass('active');
+				jQuery("[data-toggle=offcanvas]").click(function() {
+					jQuery(".row-offcanvas").toggleClass("active");
 				});
 				
 				jQuery(window).scroll(function(){
-					console.log("scroll");
 					if  (jQuery(window).scrollTop() >= jQuery(document).height() - jQuery(window).height()) {
 						fncLoadingPages();
 					}
 				});
 	
 				function fncLoadingPages () {
-					console.log("page loading ...");
+					
+					
+					
 				}
 			});
 			/* #* [E] Document Ready *# */

@@ -169,3 +169,8 @@ footer {
 	background-color: #ccc;
   }
   /* [E] SungJun's */
+  
+.view-image { background:#000; padding-top: 0px;}
+.view-image .btn-close-view-image { height:45px; }
+.view-image .btn-close-view-image a { display:block; float:right; width:45px; height:45px; background:url('/resources/lib/images/btn/btn_close.png') no-repeat 0 0; background-size:45px 45px; text-indent:-9999px; }
+.view-image img { clear:both; width:100%; }

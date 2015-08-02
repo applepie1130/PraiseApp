@@ -47,7 +47,7 @@ public class MainController extends CommonController {
 	 * @stereotype Action
 	 */
 	@RequestMapping(value = {"", "/"})
-	public String findMainView(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
+	public String findMainPage(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
 		List findUserList = mainSvc.findPageList(paramMap);
@@ -62,26 +62,21 @@ public class MainController extends CommonController {
 				
 		model.addAttribute("rData", findUserList);
 		
-		// redirect
 		return "/main/index";
 	}
 	
 	/**
-	 * @Desc	: 설정파일 조회 테스트
+	 * @Desc	: 뷰페이지
 	 * @Author	: 김성준
-	 * @Create	: 2015년 05월 16일 
+	 * @Create	: 2015년 08월 2일 
 	 * @stereotype Action
 	 */
-	@ResponseBody
-	@RequestMapping(value = "/findBeanConfigure", method = RequestMethod.POST)
-	public Map findBeanConfigure(@RequestParam Map<String, Object> paramMap, HttpServletRequest request, HttpServletResponse response) {
+	@RequestMapping(value = "/view")
+	public String findViewPage(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
-		Map mRtnData = new HashMap<String, Object>();
-		mRtnData.put("serviceShutDownStartDt", commonConfig.getServiceShutDownStartDt());
-		mRtnData.put("serviceShutDownEndDt", commonConfig.getServiceShutDownEndDt());
 		
-		return mRtnData;
+		return "/main/view";
 	}
 	
 	/**

@@ -1,0 +1,23 @@
+<!-- #*	[S] Common Header *# -->
+#parse( "/common/header.vm" )
+<!-- #*	[E] Common Header *# -->
+
+<body class="view-image">
+	<div class="btn-close-view-image">
+		<a href="#" onclick="history.back(); return false;">뷰 이미지 닫기</a>
+	</div>
+	<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" alt="뷰 이미지">
+	<script type="text/javascript">
+		"use strict";
+		/* #* Velocity 주석 in Javascript *# */
+		(function(jQuery) {
+			/* #* [S] Document Ready *# */
+			jQuery(function() {
+			});
+			/* #* [E] Document Ready *# */
+		}(jQuery));
+	</script>
+</body>
+<!-- #*	[S] Common Footer *# -->
+#parse( "/common/footer.vm" )
+<!-- #*	[E] Common Footer *# -->
