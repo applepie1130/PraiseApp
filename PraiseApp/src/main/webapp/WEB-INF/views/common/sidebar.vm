@@ -1,6 +1,6 @@
 			<div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
 				<ul class="nav nav-sidebar">
-					<li><a href="#"><i class="glyphicon glyphicon-home"></i> 홈</a></li>
-					<li><a href="#"><i class="glyphicon glyphicon-star-empty"></i> 즐겨찾기</a></li>
+					<li><a href="/"><i class="glyphicon glyphicon-home"></i> 홈</a></li>
+					<li><a href="/favorite"><i class="fa fa-lg fa-star-o"></i> 즐겨찾기</a></li>
 				</ul>
 			</div>

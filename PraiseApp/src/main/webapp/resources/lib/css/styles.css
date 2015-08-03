@@ -36,7 +36,7 @@ footer {
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 110px;
+    width: 120px;
     margin-left: 15px;
   }
 }
@@ -174,3 +174,34 @@ footer {
 .view-image .btn-close-view-image { height:45px; }
 .view-image .btn-close-view-image a { display:block; float:right; width:45px; height:45px; background:url('/resources/lib/images/btn/btn_close.png') no-repeat 0 0; background-size:45px 45px; text-indent:-9999px; }
 .view-image img { clear:both; width:100%; }
+
+
+.fa-star { color : #ffa100; } .fa-star:hover { color : #ffce79; }
+.fa-star-o { color : #9e9e9e; } .fa-star-o:hover { color : #ffa100; }
+.title { color : #688a7e; }
+
+
+.bs-glyphicons {
+	margin: 0 -10px 20px;
+    overflow: hidden;	
+}
+.bs-glyphicons-list {
+	padding-left: 0;
+    list-style: none;
+}
+.bs-glyphicons li {
+	float: left;
+    width: 20%;
+    height: 40px;
+    padding-top: 10px;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #fff;
+}
+@media (min-width: 768px)
+.bs-glyphicons li {
+    width: 12.5%;
+    font-size: 12px;
+}

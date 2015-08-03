@@ -1,0 +1,208 @@
+<!-- #*	[S] Common Header *# -->
+#parse( "/common/header.vm" )
+<!-- #*	[E] Common Header *# -->
+
+<body>
+	<!-- #*	[S] Common Snb *# -->
+	#parse( "/common/snb.vm" )
+	<!-- #*	[E] Common Snb *# -->
+	
+	<!-- #*	[S] Container *# -->
+	<div class="container-fluid">
+		<div class="row row-offcanvas row-offcanvas-left">
+			
+			<!-- #*	[S] Common Sidebar *# -->
+			#parse( "/common/sidebar.vm" )
+			<!-- #*	[E] Common Sidebar *# -->
+			
+			<div class="col-sm-9 col-md-10 main">
+			
+			#if ( $!{pageType} == "list" )
+				<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
+					<li>
+						<i class="fa fa-lg fa-refresh" style="margin-right: 5px;"></i> 
+						<a href="/favorite?pageType=img" style="color:#999;">이미지형</a>
+					</li>
+					<li class="active" style="color:#555;"><strong>리스트형</strong></li>
+				</ol>
+				
+				<div id="pageListType">
+					<div class="col-sm-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="list-group">
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>
+						            <a href="#" class="list-group-item">
+						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+										<span class="pull-right text-muted small"><em>234 장</em></span>
+						            </a>					            
+						        </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			#else
+				<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
+					<li class="active" style="color:#555;">
+						<i class="fa fa-lg fa-refresh" style="margin-right: 5px;"></i>
+						<strong>이미지형</strong>
+					</li>
+					<li>
+						<a href="/favorite?pageType=list" style="color:#999;">리스트형</a>
+					</li>
+				</ol>
+				
+				<div id="pageImgType">
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="thumbnail">
+									<a href="/view/">
+										<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" style="height: 300px; width: 100%; display: block;">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="thumbnail">
+									<a href="/view/">
+										<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" style="height: 300px; width: 100%; display: block;">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="thumbnail">
+									<a href="/view/">
+										<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" style="height: 300px; width: 100%; display: block;">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="thumbnail">
+									<a href="/view/">
+										<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" style="height: 300px; width: 100%; display: block;">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="thumbnail">
+									<a href="/view/">
+										<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" style="height: 300px; width: 100%; display: block;">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="thumbnail">
+									<a href="/view/">
+										<img src="http://cfile234.uf.daum.net/original/2531744555A4A39B200D89" style="height: 300px; width: 100%; display: block;">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			#end
+			</div>
+		</div>
+	</div>		
+	<!-- #*	[E] Container *# -->
+	
+	<footer>
+		<div class="pull-right">
+			<div class="glyphicon glyphicon-copyright-mark"></div> 
+			2015 Copyright Sung-Jun.
+		</div>
+	</footer>
+	<script type="text/javascript">
+		"use strict";
+		/* #* Velocity 주석 in Javascript *# */
+		(function(jQuery) {
+			/* #* [S] Document Ready *# */
+			jQuery(function() {
+				jQuery("[data-toggle=offcanvas]").click(function() {
+					jQuery(".row-offcanvas").toggleClass("active");
+				});
+			});
+			/* #* [E] Document Ready *# */
+		}(jQuery));
+	</script>
+</body>
+<!-- #*	[S] Common Footer *# -->
+#parse( "/common/footer.vm" )
+<!-- #*	[E] Common Footer *# -->

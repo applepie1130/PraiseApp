@@ -16,46 +16,188 @@
 			<!-- #*	[E] Common Sidebar *# -->
 			
 			<div class="col-sm-9 col-md-10 main">
-			<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
-				<li><i class="glyphicon glyphicon-list" style="margin-right: 5px;"></i> <a href="#" style="color:#999;">장 순</a></li>
-				<li class="active" style="color:#555;"></i>제목 순</li>
-			</ol>
+			#if ( $!{pageType} == "title" ) 
+				<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
+					<li>
+						<i class="fa fa-lg fa-refresh" style="margin-right: 5px;"></i>
+						<a href="/main?pageType=number" style="color:#999;">장 순</a></li>
+					<li class="active" style="color:#555;"><strong>제목 순</strong></li>
+				</ol>
 			
-				<div class="col-sm-12">
+				<div class="col-sm-6">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h4>ㄱ</h4></div>
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>ㄱ</strong></h3>
+						</div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="/view/" class="list-group-item">가가가가</a>
-								<a href="/view/" class="list-group-item">가가가가</a>
-								<a href="/view/" class="list-group-item">가가가가</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									가가가
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									가가가
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									가가가
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									가가가
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									가가가
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
 							</div>
 						</div>
 					</div>
-					
 					<div class="panel panel-default">
-						<div class="panel-heading"><h4>ㄴ</h4></div>
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>ㄴ</strong></h3>
+						</div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="/view/" class="list-group-item">나나나</a>
-								<a href="/view/" class="list-group-item">나나나</a>
-								<a href="/view/" class="list-group-item">나나나</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									나나나
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									나나나
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									나나나
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									나나나
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
 							</div>
 						</div>
 					</div>
-					
-					<div class="panel panel-default">
-						<div class="panel-heading"><h4>ㄷ</h4></div>
-						<div class="panel-body">
-							<div class="list-group">
-								<a href="/view/" class="list-group-item">다다다</a>
-								<a href="/view/" class="list-group-item">다다다</a>
-								<a href="/view/" class="list-group-item">다다다</a>
-							</div>
-						</div>
-					</div>
-					
 				</div>
+					
+				<div class="col-sm-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>ㄷ</strong></h3>
+						</div>
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									다다다
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									다다다
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									다다다
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									다다다
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>ㄹ</strong></h3>
+						</div>
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									라라라
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									라라라
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									라라라
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									라라라
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									라라라
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+								<a href="/view/" class="list-group-item">
+									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+									라라라
+									<span class="pull-right text-muted small"><em>234 장</em></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			#else
+			
+				<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
+					<li class="active" style="color:#555;">
+						<i class="fa fa-lg fa-refresh" style="margin-right: 5px;"></i>
+						<strong>장 순</strong>
+					</li>
+					<li>
+						<a href="/main?pageType=title" style="color:#999;">제목 순</a>
+					</li>
+				</ol>
+			
+				<div class="col-sm-6">
+					#foreach ( $i in [0..11] )
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								#set ( $nIndex = $i + 1 ) 
+								#set ( $nStartTitle = $nIndex * 50 - 49 )
+								#set ( $nEndTitle = $nIndex * 50 )
+								<h3 class="panel-title"><strong>$nStartTitle - $nEndTitle장</strong></h3>
+							</div>
+							<div class="panel-body">
+								<div class="bs-glyphicons">
+									<ul class="bs-glyphicons-list">
+									#foreach ( $j in [$nStartTitle..$nEndTitle] )
+										<li onclick="location.href='/view/';">
+											<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i> $j
+										</li>
+									#end
+									</ul>
+								</div>
+							</div>
+						</div>
+					#end
+				</div>
+			#end	
 			</div>
 		</div>
 	</div>		

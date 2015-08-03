@@ -1,28 +1,25 @@
 <!doctype html>
 <html lang="ko">
 <head>
-	<!-- <meta http-equiv="Refresh" content="100" />  -->
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<meta name="generator" content="Bootply" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	
-	<title>경배와 찬양</title>
+#if ( $!{pageType} == "view" ) 
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+#else
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+#end
+	
+	<title>Worship and Praise</title>
 	
 	<link rel="stylesheet" href="/resources/lib/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/resources/lib/css/styles.css">
-	<link rel="stylesheet" href="/resources/lib/css/dataTables.bootstrap.css">
-	<!-- <link rel="stylesheet" href="/resources/lib/css/common.css"></link>  -->
-	<!-- <link rel="stylesheet" href="/resources/lib/css/font.css"></link>-->
+	<link rel="stylesheet" href="/resources/lib/css/font-awesome.min.css">
 	
 	<script type="text/javascript" src="/resources/lib/js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="/resources/lib/js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/resources/lib/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/resources/lib/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="/resources/lib/js/dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src="/resources/lib/js/bootstrap.min.js"></script>	
 	<script type="text/javascript" src="/resources/lib/js/spin.min.js"></script>
 	<script type="text/javascript" src="/resources/lib/js/common.js"></script>
 </head>
-<!-- #parse( "/common/spinner.vm" )
-#parse( "/common/alertModal.vm" )
-#parse( "/common/modal.vm" ) -->
+#parse( "/common/spinner.vm" )

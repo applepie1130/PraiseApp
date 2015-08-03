@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.ObjectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,8 @@ public class MainController extends CommonController {
 	public String findMainPage(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
+		String sPageType = ObjectUtils.toString(paramMap.get("pageType"));
+		
 		List findUserList = mainSvc.findPageList(paramMap);
 		
 		// writeFile
@@ -61,6 +64,7 @@ public class MainController extends CommonController {
 		findUserList = fileSvc.readFileFromJSONList(sFile);
 				
 		model.addAttribute("rData", findUserList);
+		model.addAttribute("pageType", sPageType);
 		
 		return "/main/index";
 	}
@@ -75,8 +79,26 @@ public class MainController extends CommonController {
 	public String findViewPage(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
+		model.addAttribute("pageType", "view");
 		
 		return "/main/view";
+	}
+	
+	/**
+	 * @Desc	: 즐겨찾기 페이지
+	 * @Author	: 김성준
+	 * @Create	: 2015년 08월 2일 
+	 * @stereotype Action
+	 */
+	@RequestMapping(value = "/favorite")
+	public String findFavoritePage(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
+		paramMap = RequestUtil.getParameter(paramMap, request, response);
+		
+		String sPageType = ObjectUtils.toString(paramMap.get("pageType"));
+		
+		model.addAttribute("pageType", sPageType);
+		
+		return "/main/favorite";
 	}
 	
 	/**
