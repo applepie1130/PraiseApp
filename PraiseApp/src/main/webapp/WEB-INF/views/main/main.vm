@@ -242,7 +242,7 @@
 					jQuery(".row-offcanvas").toggleClass("active");
 				});
 				
-				jQuery("#main [data-click=numberbutton]").bind("click", function(e) {
+				jQuery("[data-click=numberbutton]").bind("click", function(e) {
 					e.preventDefault();
 					
 					if ( e.target.nodeName === "I" ) {
