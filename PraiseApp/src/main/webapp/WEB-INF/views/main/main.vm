@@ -20,7 +20,7 @@
 				<ol class="breadcrumb" style="background-color: transparent; margin-bottom: 5px;">
 					<li>
 						<i class="fa fa-lg fa-refresh" style="margin-right: 5px;"></i>
-						<a href="/main?pageType=number" style="color:#999;">장 순</a></li>
+						<a href="?pageType=number" style="color:#999;">장 순</a></li>
 					<li class="active" style="color:#555;"><strong>제목 순</strong></li>
 				</ol>
 			
@@ -31,28 +31,28 @@
 						</div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="1" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="2" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="3" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="4" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="5" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -65,23 +65,23 @@
 						</div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="6" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="7" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="8" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="9" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -97,23 +97,23 @@
 						</div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="10" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="11" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="12" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="13" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -127,33 +127,33 @@
 						</div>
 						<div class="panel-body">
 							<div class="list-group">
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="14" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="15" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="16" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="17" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="18" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
-								<a href="/view/" class="list-group-item">
-									<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i>
+								<a href="#" class="list-group-item" data-click="numberbutton">
+									<i class="fa fa-lg fa-star-o" data-value="19" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -170,7 +170,7 @@
 						<strong>장 순</strong>
 					</li>
 					<li>
-						<a href="/main?pageType=title" style="color:#999;">제목 순</a>
+						<a href="?pageType=title" style="color:#999;">제목 순</a>
 					</li>
 				</ol>
 			
@@ -187,8 +187,8 @@
 								<div class="bs-glyphicons">
 									<ul class="bs-glyphicons-list">
 									#foreach ( $j in [$nStartTitle..$nEndTitle] )
-										<li onclick="location.href='/view/';">
-											<i class="fa fa-lg fa-star-o" style="margin-right: 10px;"></i> $j
+										<li data-click="numberbutton">
+											<i class="fa fa-lg fa-star-o" data-value="$j" style="margin-right: 10px;"></i> $j
 										</li>
 									#end
 									</ul>
@@ -197,7 +197,7 @@
 						</div>
 					#end
 				</div>
-			#end	
+			#end
 			</div>
 		</div>
 	</div>		
@@ -215,22 +215,66 @@
 		(function(jQuery) {
 			/* #* [S] Document Ready *# */
 			jQuery(function() {
+				/* #* [S] Pre Excute Function *# */
+				fnChangeStarColor();
+				/* #* [E] Pre Excute Function *# */
 				
-				jQuery("[data-toggle=offcanvas]").click(function() {
+				/* #* [S] Init Function *# */
+				function fnChangeStarColor () {
+					var sFavoriteVal	= "$!{favoriteVal}";
+					var rSplited		= sFavoriteVal.split(",");
+					var nLength			= rSplited.length-1;
+					var _target			= "";
+					
+					for ( var i=0; i<nLength; i++ ) {
+						_target		= jQuery("[data-value=" + rSplited[i] + "]");
+						_target.addClass("fa-star");
+						_target.removeClass("fa-star-o");
+					}
+				}
+				
+				function fncLoadingPages () {
+				}
+				/* #* [E] Init Function *# */
+				
+				/* #* [S] Event Binding *# */
+				jQuery("[data-toggle=offcanvas]").bind("click", function() {
 					jQuery(".row-offcanvas").toggleClass("active");
 				});
 				
+				jQuery("#main [data-click=numberbutton]").bind("click", function(e) {
+					e.preventDefault();
+					
+					if ( e.target.nodeName === "I" ) {
+						var _target		= jQuery(e.target);
+						var sClassNm	= _target.attr("class");
+						var sSettingVal	= _target.attr("data-value");
+						
+						Controller.setAction("/saveFavorite");
+						Controller.setParams({
+							"cookieValue"	: sSettingVal,
+						});
+						Controller.submit(function(data){
+							if ( sClassNm.indexOf("fa-star-o") > -1 ) {
+								_target.addClass("fa-star");
+								_target.removeClass("fa-star-o");
+							} else {
+								_target.addClass("fa-star-o");
+								_target.removeClass("fa-star");
+							}
+						});
+						
+					} else {
+						location.href="/view/";
+					}
+				});
+				
 				jQuery(window).scroll(function(){
-					if  (jQuery(window).scrollTop() >= jQuery(document).height() - jQuery(window).height()) {
+					if (jQuery(window).scrollTop() >= jQuery(document).height() - jQuery(window).height()) {
 						fncLoadingPages();
 					}
 				});
-	
-				function fncLoadingPages () {
-					
-					
-					
-				}
+				/* #* [E] Event Binding *# */
 			});
 			/* #* [E] Document Ready *# */
 		}(jQuery));

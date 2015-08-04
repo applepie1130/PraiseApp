@@ -12,6 +12,8 @@ public class GLIO {
 	private Boolean userAgentMobileYn = false;
 	
 	private String userIp;
+	
+	private String favoriteCookieInfo;
 
 	/**
 	 * @return the snsLoginStatus
@@ -53,5 +55,19 @@ public class GLIO {
 	 */
 	public void setUserIp(String userIp) {
 		this.userIp = userIp;
+	}
+
+	/**
+	 * @param the favoriteCookieInfo 
+	 */
+	public String getFavoriteCookieInfo() {
+		return favoriteCookieInfo;
+	}
+
+	/**
+	 * @param favoriteCookieInfo the favoriteCookieInfo to set
+	 */
+	public void setFavoriteCookieInfo(String favoriteCookieInfo) {
+		this.favoriteCookieInfo = favoriteCookieInfo;
 	}
 }

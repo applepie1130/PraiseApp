@@ -31,36 +31,36 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<div class="list-group">
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="1" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="2" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="3" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="4" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="5" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="6" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="7" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item">
-						                <i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> Title
+						            <a href="#" class="list-group-item" data-click="numberbutton">
+						                <i class="fa fa-lg fa-star" data-value="8" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>					            
 						        </div>
@@ -83,8 +83,11 @@
 					<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h3 class="panel-title">
-									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+								<h3 class="panel-title" >
+									<span data-click="numberbutton">
+										<i class="fa fa-lg fa-star" data-value="1" style="margin-right: 10px;"></i>
+									</span>
+									<strong>Title</strong>
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -100,7 +103,10 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+									<span data-click="numberbutton">
+										<i class="fa fa-lg fa-star" data-value="2" style="margin-right: 10px;"></i>
+									</span>
+									<strong>Title</strong>
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -116,7 +122,10 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+									<span data-click="numberbutton">
+										<i class="fa fa-lg fa-star" data-value="3" style="margin-right: 10px;"></i>
+									</span>
+									<strong>Title</strong>
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -132,7 +141,10 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+									<span data-click="numberbutton">
+										<i class="fa fa-lg fa-star" data-value="4" style="margin-right: 10px;"></i>
+									</span>
+									<strong>Title</strong>
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -148,7 +160,10 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+									<span data-click="numberbutton">
+										<i class="fa fa-lg fa-star" data-value="5" style="margin-right: 10px;"></i>
+									</span>
+									<strong>Title</strong>
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -164,7 +179,10 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									<i class="fa fa-lg fa-star" style="margin-right: 10px;"></i> <strong>Title</strong>
+									<span data-click="numberbutton">
+										<i class="fa fa-lg fa-star" data-value="6" style="margin-right: 10px;"></i>
+									</span>
+									<strong>Title</strong>
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -186,7 +204,7 @@
 	<footer>
 		<div class="pull-right">
 			<div class="glyphicon glyphicon-copyright-mark"></div> 
-			2015 Copyright Sung-Jun.
+			2015 Copyright Sung-Jun
 		</div>
 	</footer>
 	<script type="text/javascript">
@@ -195,6 +213,53 @@
 		(function(jQuery) {
 			/* #* [S] Document Ready *# */
 			jQuery(function() {
+				
+				/* #* [S] Pre Excute Function *# */
+				fnChangeStarColor();
+				/* #* [E] Pre Excute Function *# */
+				
+				/* #* [S] Init Function *# */
+				function fnChangeStarColor () {
+					var sFavoriteVal	= "$!{favoriteVal}";
+					var rSplited		= sFavoriteVal.split(",");
+					var nLength			= rSplited.length-1;
+					var _target			= "";
+					
+					for ( var i=0; i<nLength; i++ ) {
+						_target		= jQuery("[data-value=" + rSplited[i] + "]");
+						_target.addClass("fa-star");
+						_target.removeClass("fa-star-o");
+					}
+				}
+				
+				function fncLoadingPages () {
+				}
+				/* #* [E] Init Function *# */
+				
+				jQuery("[data-click=numberbutton]").bind("click", function(e) {
+					e.preventDefault();
+					
+					if ( confirm("즐겨찾기 해제하시겠습니까? (확인/취소)") ) {
+						var _target		= jQuery(e.target);
+						var sClassNm	= _target.attr("class");
+						var sSettingVal	= _target.attr("data-value");
+						
+						Controller.setAction("/saveFavorite");
+						Controller.setParams({
+							"cookieValue"	: sSettingVal,
+						});
+						Controller.submit(function(data){
+							if ( sClassNm.indexOf("fa-star-o") > -1 ) {
+								_target.addClass("fa-star");
+								_target.removeClass("fa-star-o");
+							} else {
+								_target.addClass("fa-star-o");
+								_target.removeClass("fa-star");
+							}
+						});
+					}
+				});
+				
 				jQuery("[data-toggle=offcanvas]").click(function() {
 					jQuery(".row-offcanvas").toggleClass("active");
 				});

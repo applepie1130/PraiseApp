@@ -51,6 +51,11 @@ public class HandlerInterceptorAdapter extends SuperDelegationAdapter implements
 			GLIO.setUserIp(request.getRemoteAddr());
 		}
 		
+		// 즐겨찾기 쿠키 확인 
+		mCookieInfo.put("cookieName", "MY_FAVORITE");
+		mRtnCookieInfo = RequestUtil.getCookie(mCookieInfo, request, response);
+		GLIO.setFavoriteCookieInfo(ObjectUtils.toString(mRtnCookieInfo.get("MY_FAVORITE")));
+		
 		System.out.println("");
 		System.out.println("==============PRE HANDLE==================");
 		System.out.println("Referer\t\t: " + sReferer);
@@ -58,6 +63,7 @@ public class HandlerInterceptorAdapter extends SuperDelegationAdapter implements
 		System.out.println("Login ?\t\t: " + GLIO.getSnsLoginStatus());
 		System.out.println("isMobile ?\t: " + GLIO.getUserAgentMobileYn());
 		System.out.println("Client IP ?\t: " + GLIO.getUserIp());
+		System.out.println("Favorite ?\t: " + GLIO.getFavoriteCookieInfo());
 		System.out.println("Instance Info \t" + GLIO);
 		System.out.println("==============PRE HANDLE==================");
 		System.out.println("");
