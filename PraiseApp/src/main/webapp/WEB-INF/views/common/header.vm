@@ -14,12 +14,14 @@
 	
 	<link rel="stylesheet" href="/resources/lib/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/resources/lib/css/styles.css">
+	<link rel="stylesheet" href="/resources/lib/css/font.css">
 	<link rel="stylesheet" href="/resources/lib/css/font-awesome.min.css">
 	
 	<script type="text/javascript" src="/resources/lib/js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="/resources/lib/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/resources/lib/js/bootstrap.min.js"></script>	
 	<script type="text/javascript" src="/resources/lib/js/spin.min.js"></script>
+	<script type="text/javascript" src="/resources/lib/js/typeahead.js"></script>
 	<script type="text/javascript" src="/resources/lib/js/common.min.js"></script>
 </head>
 #parse( "/common/spinner.vm" )

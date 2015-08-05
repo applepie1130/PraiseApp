@@ -32,27 +32,22 @@
 						<div class="panel-body">
 							<div class="list-group">
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="1" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="2" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="3" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="4" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="5" style="margin-right: 10px;"></i>
 									가가가
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -66,22 +61,18 @@
 						<div class="panel-body">
 							<div class="list-group">
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="6" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="7" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="8" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="9" style="margin-right: 10px;"></i>
 									나나나
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -98,22 +89,18 @@
 						<div class="panel-body">
 							<div class="list-group">
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="10" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="11" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="12" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="13" style="margin-right: 10px;"></i>
 									다다다
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -128,32 +115,26 @@
 						<div class="panel-body">
 							<div class="list-group">
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="14" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="15" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="16" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="17" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="18" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									<i class="fa fa-lg fa-star-o" data-value="19" style="margin-right: 10px;"></i>
 									라라라
 									<span class="pull-right text-muted small"><em>234 장</em></span>
 								</a>
@@ -181,15 +162,13 @@
 								#set ( $nIndex = $i + 1 ) 
 								#set ( $nStartTitle = $nIndex * 50 - 49 )
 								#set ( $nEndTitle = $nIndex * 50 )
-								<h3 class="panel-title"><strong>$nStartTitle - $nEndTitle장</strong></h3>
+								<h3 class="panel-title"><strong>$nStartTitle - $nEndTitle 장</strong></h3>
 							</div>
 							<div class="panel-body">
 								<div class="bs-glyphicons">
 									<ul class="bs-glyphicons-list">
 									#foreach ( $j in [$nStartTitle..$nEndTitle] )
-										<li data-click="numberbutton">
-											<i class="fa fa-lg fa-star-o" data-value="$j" style="margin-right: 10px;"></i> $j
-										</li>
+										<li data-click="numberbutton">$j 장</li>
 									#end
 									</ul>
 								</div>
@@ -234,6 +213,7 @@
 				}
 				
 				function fncLoadingPages () {
+					console.log("loadingng");
 				}
 				/* #* [E] Init Function *# */
 				
@@ -244,29 +224,7 @@
 				
 				jQuery("[data-click=numberbutton]").bind("click", function(e) {
 					e.preventDefault();
-					
-					if ( e.target.nodeName === "I" ) {
-						var _target		= jQuery(e.target);
-						var sClassNm	= _target.attr("class");
-						var sSettingVal	= _target.attr("data-value");
-						
-						Controller.setAction("/saveFavorite");
-						Controller.setParams({
-							"cookieValue"	: sSettingVal,
-						});
-						Controller.submit(function(data){
-							if ( sClassNm.indexOf("fa-star-o") > -1 ) {
-								_target.addClass("fa-star");
-								_target.removeClass("fa-star-o");
-							} else {
-								_target.addClass("fa-star-o");
-								_target.removeClass("fa-star");
-							}
-						});
-						
-					} else {
-						location.href="/view/";
-					}
+					location.href="/view/";
 				});
 				
 				jQuery(window).scroll(function(){

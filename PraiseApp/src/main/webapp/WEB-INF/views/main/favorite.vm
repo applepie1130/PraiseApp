@@ -31,35 +31,35 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<div class="list-group">
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="1" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="2" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="3" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="4" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="5" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="6" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="7" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>
-						            <a href="#" class="list-group-item" data-click="numberbutton">
+						            <a href="/view/" class="list-group-item" data-click="numberbutton">
 						                <i class="fa fa-lg fa-star" data-value="8" style="margin-right: 10px;"></i> Title
 										<span class="pull-right text-muted small"><em>234 장</em></span>
 						            </a>					            
@@ -239,24 +239,28 @@
 				jQuery("[data-click=numberbutton]").bind("click", function(e) {
 					e.preventDefault();
 					
-					if ( confirm("즐겨찾기 해제하시겠습니까? (확인/취소)") ) {
-						var _target		= jQuery(e.target);
-						var sClassNm	= _target.attr("class");
-						var sSettingVal	= _target.attr("data-value");
-						
-						Controller.setAction("/saveFavorite");
-						Controller.setParams({
-							"cookieValue"	: sSettingVal,
-						});
-						Controller.submit(function(data){
-							if ( sClassNm.indexOf("fa-star-o") > -1 ) {
-								_target.addClass("fa-star");
-								_target.removeClass("fa-star-o");
-							} else {
-								_target.addClass("fa-star-o");
-								_target.removeClass("fa-star");
-							}
-						});
+					if ( e.target.nodeName === "I" ) {
+						if ( confirm("즐겨찾기 해제하시겠습니까?") ) {
+							var _target		= jQuery(e.target);
+							var sClassNm	= _target.attr("class");
+							var sSettingVal	= _target.attr("data-value");
+							
+							Controller.setAction("/saveFavorite");
+							Controller.setParams({
+								"cookieValue"	: sSettingVal,
+							});
+							Controller.submit(function(data){
+								if ( sClassNm.indexOf("fa-star-o") > -1 ) {
+									_target.addClass("fa-star");
+									_target.removeClass("fa-star-o");
+								} else {
+									_target.addClass("fa-star-o");
+									_target.removeClass("fa-star");
+								}
+							});
+						}
+					} else {
+						location.href="/view/";
 					}
 				});
 				

@@ -1,10 +1,10 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">		
 				<div style="margin-top:8px;">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="제목이나 장을 입력해보세요.">
+					<div class="input-group" id="snb">
+						<input type="text" class="form-control typeahead" placeholder="제목이나 장을 입력해보세요.">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" style="border-bottom-right-radius: 4px; border-top-right-radius: 4px;">
+							<button class="btn btn-default" type="button" style="border-radius:0px; border-bottom-right-radius: 4px; border-top-right-radius: 4px;">
 								<i class="glyphicon glyphicon-search"></i>
 							</button>
 							<button type="button" class="btn btn-default navbar-toggle" data-toggle="offcanvas" style="float: none; position: relative; margin-bottom:0px; margin-left:10px; border-bottom-left-radius: 4px; border-top-left-radius: 4px; background-color: transparent; border-color: transparent;" >
@@ -18,4 +18,66 @@
 					</div>
 				</div>
 			</div>
-		</nav>				  
+		</nav>
+		
+		<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+		
+		<script type="text/javascript">
+		
+			jQuery(window).scroll(function(){
+				if (jQuery(window).scrollTop() >= 200 ) {
+					jQuery("#scroll-top").addClass("in");
+				} else {
+					jQuery("#scroll-top").removeClass("in");
+				}
+			});
+			
+			jQuery("#scroll-top").bind("click", function(){
+				jQuery('html,body').animate({scrollTop:0}, 100);
+			});
+		
+			var substringMatcher = function( strs ) {
+				return function findMatches(q, cb) {
+					var matches, substringRegex;
+					
+					// an array that will be populated with substring matches
+					matches = [];
+					
+					// regex used to determine if a string contains the substring `q`
+					substrRegex = new RegExp(q, 'i');
+	
+				    // iterate through the pool of strings and for any string that
+				    // contains the substring `q`, add it to the `matches` array
+					jQuery.each(strs, function(i, str) {
+						if (substrRegex.test(str)) {
+							matches.push(str);
+						}
+					});
+				    
+					cb(matches);
+				};
+			};
+	
+			var states = ['가나다라', '나다라마', '다라마바', '라마바', '사아자차카',
+			              '하나님의 은혜',
+			              '201', '1', '123', "568", "222", "33",
+			              'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+			              'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+			              'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+			              'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+			              'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+			              'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+			              'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+			              'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+			              ];
+				
+			jQuery('#snb .form-control').typeahead({
+				hint: false,
+				highlight: false,
+				minLength: 1
+			},
+			{
+				name: 'states',
+				source: substringMatcher(states)
+			});
+		</script>
