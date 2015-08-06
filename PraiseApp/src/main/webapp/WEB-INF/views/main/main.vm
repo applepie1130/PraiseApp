@@ -156,12 +156,38 @@
 				</ol>
 			
 				<div class="col-sm-6">
-					#foreach ( $i in [0..11] )
+					#set ( $nTotal = 10 )
+					
+					#set ( $nTotalDiv1 = $nTotal / 50.0 )
+					#set ( $nTotalDiv2 = $nTotal / 50 )
+					#set ( $nTemp = $nTotalDiv1 - $nTotalDiv2 )
+					#set ( $nTemp = $nTemp * 100 )
+					#set ( $nTemp = $math.ceil( $nTemp ) )
+					#set ( $nTemp = $nTemp * 0.5 )
+					#set ( $nTemp = $math.toInteger($nTemp) )
+					
+					#if ( $nTotal < 50 ) 
+						#set ( $nEndTotal = 1 )
+					#else  
+						#set ( $nEndTotal = $math.ceil($nTotalDiv1) )
+					#end
+					
+					#foreach ( $i in [1..$nEndTotal] )
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								#set ( $nIndex = $i + 1 ) 
-								#set ( $nStartTitle = $nIndex * 50 - 49 )
-								#set ( $nEndTitle = $nIndex * 50 )
+								#set ( $nStartTitle = $i * 50 - 49 )
+								#if ( $i == $nEndTotal && $nTemp != 0 && $nTotal >= 50 )
+									#set ( $nEndTitle = $nTemp + ( ( $i - 1 ) * 50 ) )
+								#elseif ( $i == $nEndTotal && $nTemp != 0 && $nTotal < 50 )
+									#set ( $nEndTitle = $nTemp + 50 )
+								#else 
+									#set ( $nEndTitle = $i * 50  )
+								#end
+								
+								$!{nTemp}
+								
+								$!{nEndTitle}
+								
 								<h3 class="panel-title"><strong>$nStartTitle - $nEndTitle 장</strong></h3>
 							</div>
 							<div class="panel-body">
@@ -194,12 +220,8 @@
 		(function(jQuery) {
 			/* #* [S] Document Ready *# */
 			jQuery(function() {
-				/* #* [S] Pre Excute Function *# */
-				fnChangeStarColor();
-				/* #* [E] Pre Excute Function *# */
-				
 				/* #* [S] Init Function *# */
-				function fnChangeStarColor () {
+				var fnChangeStarColor = function () {
 					var sFavoriteVal	= "$!{favoriteVal}";
 					var rSplited		= sFavoriteVal.split(",");
 					var nLength			= rSplited.length-1;
@@ -212,16 +234,16 @@
 					}
 				}
 				
-				function fncLoadingPages () {
+				var fnLoadingPages = function () {
 					console.log("loadingng");
 				}
 				/* #* [E] Init Function *# */
 				
-				/* #* [S] Event Binding *# */
-				jQuery("[data-toggle=offcanvas]").bind("click", function() {
-					jQuery(".row-offcanvas").toggleClass("active");
-				});
+				/* #* [S] Pre Excute Function *# */
+				fnChangeStarColor();
+				/* #* [E] Pre Excute Function *# */
 				
+				/* #* [S] Event Binding *# */
 				jQuery("[data-click=numberbutton]").bind("click", function(e) {
 					e.preventDefault();
 					location.href="/view/";
@@ -229,7 +251,7 @@
 				
 				jQuery(window).scroll(function(){
 					if (jQuery(window).scrollTop() >= jQuery(document).height() - jQuery(window).height()) {
-						fncLoadingPages();
+						fnLoadingPages();
 					}
 				});
 				/* #* [E] Event Binding *# */

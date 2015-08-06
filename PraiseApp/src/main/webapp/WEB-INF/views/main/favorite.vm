@@ -219,7 +219,7 @@
 				/* #* [E] Pre Excute Function *# */
 				
 				/* #* [S] Init Function *# */
-				function fnChangeStarColor () {
+				var fnChangeStarColor = function () {
 					var sFavoriteVal	= "$!{favoriteVal}";
 					var rSplited		= sFavoriteVal.split(",");
 					var nLength			= rSplited.length-1;
@@ -232,7 +232,7 @@
 					}
 				}
 				
-				function fncLoadingPages () {
+				var fnLoadingPages = function () {
 				}
 				/* #* [E] Init Function *# */
 				
@@ -262,10 +262,6 @@
 					} else {
 						location.href="/view/";
 					}
-				});
-				
-				jQuery("[data-toggle=offcanvas]").click(function() {
-					jQuery(".row-offcanvas").toggleClass("active");
 				});
 			});
 			/* #* [E] Document Ready *# */

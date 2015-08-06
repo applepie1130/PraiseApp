@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.ObjectUtils;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.tools.generic.DateTool;
+import org.apache.velocity.tools.generic.MathTool;
+import org.apache.velocity.tools.generic.NumberTool;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.mobile.device.site.SitePreferenceUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -55,7 +59,7 @@ public class HandlerInterceptorAdapter extends SuperDelegationAdapter implements
 		mCookieInfo.put("cookieName", "MY_FAVORITE");
 		mRtnCookieInfo = RequestUtil.getCookie(mCookieInfo, request, response);
 		GLIO.setFavoriteCookieInfo(ObjectUtils.toString(mRtnCookieInfo.get("MY_FAVORITE")));
-		
+
 		System.out.println("");
 		System.out.println("==============PRE HANDLE==================");
 		System.out.println("Referer\t\t: " + sReferer);
