@@ -1,5 +1,6 @@
 package com.praiseapp.main;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,23 +55,92 @@ public class MainController extends CommonController {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
 		String sPageType = ObjectUtils.toString(paramMap.get("pageType"));
+		Map mRtnData	= new HashMap<String, Object>();
 		
-		List findUserList = mainSvc.findPageList(paramMap);
+		// 페이지타입이 'title' 인경우
+		if ( "title".equals(sPageType) ) {
+			// 초성순 곡 리스트 조회
+			List rMusicSheetListByFirstNm = mainSvc.findMusicSheetListByFirstNm(paramMap);
+			List rMusicSheetListGroupByFirstNm = new ArrayList();
+			
+			// 초성별 리스트 생성
+			int nLength		= rMusicSheetListByFirstNm.size();
+			Map mTemp1		= new HashMap<String, Object>();
+			Map mTemp2		= new HashMap<String, Object>();
+			String sFirstNm1 = "";
+			String sFirstNm2 = "";
+			
+			if ( nLength > 1 ) {
+				for ( int i = 1; i < nLength; i++ ) {
+					mTemp1 = (Map) rMusicSheetListByFirstNm.get(i-1);
+					mTemp2 = (Map) rMusicSheetListByFirstNm.get(i);
+					sFirstNm1 = ObjectUtils.toString(mTemp1.get("first_nm"));
+					sFirstNm2 = ObjectUtils.toString(mTemp2.get("first_nm"));
+					
+					// 같은 초성의 경우
+					if ( sFirstNm1.equals(sFirstNm2) ) {
+						rMusicSheetListGroupByFirstNm.add(rMusicSheetListByFirstNm.get(i-1));
+						
+						if ( i == nLength -1 ) {	// 마지막 데이터의 경우 한번 더 확인
+							rMusicSheetListGroupByFirstNm.add(rMusicSheetListByFirstNm.get(i));
+						}
+						
+					// 다른 초성의 경우
+					} else {
+						rMusicSheetListGroupByFirstNm.add(rMusicSheetListByFirstNm.get(i-1));
+						mRtnData.put(sFirstNm1, rMusicSheetListGroupByFirstNm);
+						rMusicSheetListGroupByFirstNm = new ArrayList();
+						
+						if ( i == nLength -1 ) {	// 마지막 데이터의 경우 한번 더 확인 
+							rMusicSheetListGroupByFirstNm.add(rMusicSheetListByFirstNm.get(i));
+							mRtnData.put(sFirstNm2, rMusicSheetListGroupByFirstNm);
+							rMusicSheetListGroupByFirstNm = new ArrayList();
+						}
+					}
+				}
+				mRtnData.put(sFirstNm1, rMusicSheetListGroupByFirstNm);
+				
+			} else { 
+				
+				if ( nLength < 1 ) {
+					
+				} else {
+					mTemp1 = (Map) rMusicSheetListByFirstNm.get(0);
+					sFirstNm1 = ObjectUtils.toString(mTemp1.get("first_nm"));
+					mRtnData.put(sFirstNm1, rMusicSheetListByFirstNm);
+				}
+			}
 		
-		// writeFile
-		String sFile = "/batch/data/PraiseApp/main/rUserList.json";
-		fileSvc.writeFileToJSONList(sFile, findUserList);
+			// writeFile
+//			String sFile = "/batch/data/PraiseApp/main/rUserList.json";
+//			fileSvc.writeFileToJSONList(sFile, rMusicSheetListGroupByFirstNm);
+//			
+//			// readFile
+//			sFile = "/batch/data/PraiseApp/main/rUserList.json";
+//			rMusicSheetListGroupByFirstNm = fileSvc.readFileFromJSONList(sFile);
+			
+			// 즐겨찾기 쿠키정보 가져오기
+			String sFavoriteVal = GLIO.getFavoriteCookieInfo();
+			
+			System.out.println(mRtnData);
+			
+			model.addAttribute("mRtnData", mRtnData);
+			model.addAttribute("favoriteVal", sFavoriteVal);
 		
-		// readFile
-		sFile = "/batch/data/PraiseApp/main/rUserList.json";
-		findUserList = fileSvc.readFileFromJSONList(sFile);
+		// 페이지타입이 'number' 인경우
+		} else {
+			List rMusicSheetTotalCount = mainSvc.findtMusicSheetTotalCount(paramMap);
+			String sTotalNum = "0";
+			
+			if ( rMusicSheetTotalCount.size() > 0) {
+				mRtnData = (Map) rMusicSheetTotalCount.get(0);
+				sTotalNum = ObjectUtils.toString(mRtnData.get("tot_cnt"));
+			}
+			
+			model.addAttribute("nTotalCnt", sTotalNum);
+		}
 		
-		// 즐겨찾기 쿠키정보 가져오기
-		String sFavoriteVal = GLIO.getFavoriteCookieInfo();
-		
-		model.addAttribute("rData", findUserList);
 		model.addAttribute("pageType", sPageType);
-		model.addAttribute("favoriteVal", sFavoriteVal);
 		
 		return "/main/main";
 	}
@@ -85,7 +155,11 @@ public class MainController extends CommonController {
 	public String findViewPage(@RequestParam Map<String, Object> paramMap, Model model, HttpServletRequest request, HttpServletResponse response) {
 		paramMap = RequestUtil.getParameter(paramMap, request, response);
 		
+		// 즐겨찾기 쿠키정보 가져오기
+		String sFavoriteVal = GLIO.getFavoriteCookieInfo();
+		
 		model.addAttribute("pageType", "view");
+		model.addAttribute("favoriteVal", sFavoriteVal);
 		
 		return "/main/view";
 	}

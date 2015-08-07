@@ -25,122 +25,23 @@
 				</ol>
 			
 				<div class="col-sm-6">
+				#foreach ( $eachList in $!{mRtnData} )
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title"><strong>ㄱ</strong></h3>
+							<h3 class="panel-title"><strong>$!{eachList.get(0).first_nm}</strong></h3>
 						</div>
 						<div class="panel-body">
 							<div class="list-group">
+							#foreach ( $eachData in $!{eachList} )
 								<a href="#" class="list-group-item" data-click="numberbutton">
-									가가가
-									<span class="pull-right text-muted small"><em>234 장</em></span>
+									$!{eachData.title}
+									<span class="pull-right text-muted small"><em>$!{eachData.sheet_num} 장</em></span>
 								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									가가가
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									가가가
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									가가가
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									가가가
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
+							#end
 							</div>
 						</div>
 					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>ㄴ</strong></h3>
-						</div>
-						<div class="panel-body">
-							<div class="list-group">
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									나나나
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									나나나
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									나나나
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									나나나
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-					
-				<div class="col-sm-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>ㄷ</strong></h3>
-						</div>
-						<div class="panel-body">
-							<div class="list-group">
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									다다다
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									다다다
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									다다다
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									다다다
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>ㄹ</strong></h3>
-						</div>
-						<div class="panel-body">
-							<div class="list-group">
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									라라라
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									라라라
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									라라라
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									라라라
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									라라라
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-								<a href="#" class="list-group-item" data-click="numberbutton">
-									라라라
-									<span class="pull-right text-muted small"><em>234 장</em></span>
-								</a>
-							</div>
-						</div>
-					</div>
+				#end
 				</div>
 				
 			#else
@@ -156,51 +57,42 @@
 				</ol>
 			
 				<div class="col-sm-6">
-					#set ( $nTotal = 10 )
-					
-					#set ( $nTotalDiv1 = $nTotal / 50.0 )
-					#set ( $nTotalDiv2 = $nTotal / 50 )
-					#set ( $nTemp = $nTotalDiv1 - $nTotalDiv2 )
-					#set ( $nTemp = $nTemp * 100 )
-					#set ( $nTemp = $math.ceil( $nTemp ) )
-					#set ( $nTemp = $nTemp * 0.5 )
-					#set ( $nTemp = $math.toInteger($nTemp) )
-					
-					#if ( $nTotal < 50 ) 
-						#set ( $nEndTotal = 1 )
-					#else  
-						#set ( $nEndTotal = $math.ceil($nTotalDiv1) )
-					#end
-					
-					#foreach ( $i in [1..$nEndTotal] )
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								#set ( $nStartTitle = $i * 50 - 49 )
-								#if ( $i == $nEndTotal && $nTemp != 0 && $nTotal >= 50 )
-									#set ( $nEndTitle = $nTemp + ( ( $i - 1 ) * 50 ) )
-								#elseif ( $i == $nEndTotal && $nTemp != 0 && $nTotal < 50 )
-									#set ( $nEndTitle = $nTemp + 50 )
-								#else 
-									#set ( $nEndTitle = $i * 50  )
-								#end
-								
-								$!{nTemp}
-								
-								$!{nEndTitle}
-								
-								<h3 class="panel-title"><strong>$nStartTitle - $nEndTitle 장</strong></h3>
-							</div>
-							<div class="panel-body">
-								<div class="bs-glyphicons">
-									<ul class="bs-glyphicons-list">
-									#foreach ( $j in [$nStartTitle..$nEndTitle] )
-										<li data-click="numberbutton">$j 장</li>
-									#end
-									</ul>
+					#set ( $nTotalCnt = $math.toInteger($nTotalCnt) )
+					#set ( $nTotalCnt = 619 )
+					#if ( $nTotalCnt > 0 ) 
+						#set ( $nPannelCnt = $nTotalCnt / 50 + 1)
+						#set ( $nBtnEndCnt = ($nTotalCnt / 50.0 - $nPannelCnt + 1) * 50 )
+						#set ( $nBtnEndCnt = $math.round($nBtnEndCnt) )
+						
+						#if ( $nTotalCnt % 50 == 0 ) 
+							#set ( $nPannelCnt = $nPannelCnt - 1)
+						#end
+	
+						#foreach( $i in [1..$nPannelCnt] )
+							#set ( $nStartTitle = $i * 50 - 49 )
+							
+							#if ( $i == $nPannelCnt )
+								#set ( $nEndTitle = $nStartTitle + $nBtnEndCnt - 1 )
+							#else
+								#set ( $nEndTitle = $i * 50 )
+							#end
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title"><strong>$nStartTitle - $nEndTitle 장</strong></h3>
+								</div>
+								<div class="panel-body">
+									<div class="bs-glyphicons">
+										<ul class="bs-glyphicons-list">
+										#foreach ( $j in [$nStartTitle..$nEndTitle] )
+											<li data-click="numberbutton">$j 장</li>
+										#end
+										</ul>
+									</div>
 								</div>
 							</div>
-						</div>
-					#end
+						#end
+					#end	
 				</div>
 			#end
 			</div>

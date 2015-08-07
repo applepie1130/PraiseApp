@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mainQry" >
-	<!-- selectUserList -->
-    <select id ="selectPageList" parameterType="java.util.Map" resultType= "java.util.Map">
-		select a.user_sq									as user_sq,
-			   a.user_id									as user_id,
-			   a.user_nm									as user_nm,
-			   a.addr1										as addr1,
-			   a.addr2										as addr2,
-			   a.zipcode									as zipcode,
-			   a.phone										as phone,
+	<select id ="selectMusicSheetListBySearch" parameterType="java.util.Map" resultType= "java.util.Map">
+		select a.sheet_num									as sheet_num,
+			   a.first_nm								    as first_nm,
+			   a.title										as title,
+			   a.lyrics										as lyrics,
+			   a.composer									as composer,
+			   a.lyricist									as lyricist,
+			   a.img_path									as img_path,
+			   a.img_file_nm								as img_file_nm,
+			   a.use_yn										as use_yn,
+			   a.bigo										as bigo,
 			   date_format(a.insert_dt, '%Y%m%d%H%i%s')		as insert_dt,
-			   date_format(a.update_dt, '%Y%m%d%H%i%s')		as update_dt			   
-		  from myapp.user_info a
+			   date_format(a.update_dt, '%Y%m%d%H%i%s')		as update_dt,
+			   a.login_ip									as login_ip
+		  from praiseapp.music_sheet a
 		 where 1 = 1
-		<if test="user_nm != null">
-			and a.user_nm like concat('%', #{user_nm}, '%')
+		<if test="search_bar != null">
+		   and a.title like concat('%', #{search_bar}, '%')
 		</if>
 		
-		<if test="user_id != null">
-			and a.user_id = #{user_id}
+		   and a.use_yn = 'Y'
+		
+		 order by a.title, a.sheet_num
+    </select>
+
+
+    <select id ="selectMusicSheetListByFirstNm" parameterType="java.util.Map" resultType= "java.util.Map">
+		select a.sheet_num									as sheet_num,
+			   a.first_nm								    as first_nm,
+			   a.title										as title,
+			   a.lyrics										as lyrics,
+			   a.composer									as composer,
+			   a.lyricist									as lyricist,
+			   a.img_path									as img_path,
+			   a.img_file_nm								as img_file_nm,
+			   a.use_yn										as use_yn,
+			   a.bigo										as bigo,
+			   date_format(a.insert_dt, '%Y%m%d%H%i%s')		as insert_dt,
+			   date_format(a.update_dt, '%Y%m%d%H%i%s')		as update_dt,
+			   a.login_ip									as login_ip
+		  from praiseapp.music_sheet a
+		 where 1 = 1
+		<if test="search_bar != null">
+		   and a.title like concat('%', #{search_bar}, '%')
 		</if>
-		 order by a.user_sq desc
+		
+		   and a.use_yn = 'Y'
+		
+		 order by a.first_nm, a.title, a.sheet_num
+    </select>
+    
+    
+    <select id ="selectMusicSheetTotalCount" parameterType="java.util.Map" resultType= "java.util.Map">
+		select count(*)						as tot_cnt
+		  from praiseapp.music_sheet a
+		 where 1 = 1
+		   and a.use_yn = 'Y'
     </select>
 </mapper>

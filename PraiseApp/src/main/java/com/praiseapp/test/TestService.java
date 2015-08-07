@@ -205,7 +205,8 @@ public class TestService extends CommonService {
 				String sOrgType = file.getContentType();
 				Pattern pattern = Pattern.compile("image");
 				Matcher matcher = pattern.matcher(sOrgType);
-				
+
+				/*
 				if ( !matcher.find() ) {
 					throw new BusinessException("이미지파일만 업로드 가능합니다.<br/>다시 시도해주세요.");
 				}
@@ -217,6 +218,7 @@ public class TestService extends CommonService {
 				if ( nFileSize > 5000000 ) {
 					throw new BusinessException("파일 용량은 5MB를 초과할 수 없습니다.<br/>다시 시도해주세요.");
 				}
+				*/
 			}
 		}
 		
