@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.ObjectUtils;
-import org.apache.ibatis.reflection.SystemMetaObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -122,8 +121,6 @@ public class MainController extends CommonController {
 			// 즐겨찾기 쿠키정보 가져오기
 			String sFavoriteVal = GLIO.getFavoriteCookieInfo();
 			
-			System.out.println(mRtnData);
-			
 			model.addAttribute("mRtnData", mRtnData);
 			model.addAttribute("favoriteVal", sFavoriteVal);
 		
@@ -140,6 +137,10 @@ public class MainController extends CommonController {
 			model.addAttribute("nTotalCnt", sTotalNum);
 		}
 		
+		// 검색정보 가져오기
+		String sKeyWordData = mainSvc.findMusicSheetKeyWord();
+		
+		model.addAttribute("sKeyWordData", sKeyWordData);
 		model.addAttribute("pageType", sPageType);
 		
 		return "/main/main";
@@ -179,6 +180,10 @@ public class MainController extends CommonController {
 		// 즐겨찾기 쿠키정보 가져오기
 		String sFavoriteVal = GLIO.getFavoriteCookieInfo();
 		
+		// 검색정보 가져오기
+		String sKeyWordData = mainSvc.findMusicSheetKeyWord();
+		
+		model.addAttribute("rKewordData", sKeyWordData);
 		model.addAttribute("pageType", sPageType);
 		model.addAttribute("favoriteVal", sFavoriteVal);
 		

@@ -65,7 +65,7 @@
 					});
 				
 					jQuery(window).scroll(function(){
-						if (jQuery(window).scrollTop() >= 200 ) {
+						if (jQuery(window).scrollTop() >= 100 ) {
 							jQuery("#scroll-top").addClass("in");
 						} else {
 							jQuery("#scroll-top").removeClass("in");
@@ -76,10 +76,7 @@
 						fnScrollMove();
 					});
 					
-					var rKeyWord = [];
-					#foreach( $i in [1..10] )
-						rKeyWord.push("1234");
-					#end
+					var rKeyWord = "$!{sKeyWordData}";
 				
 					jQuery('#snb .form-control').typeahead({
 						hint: false,
@@ -88,7 +85,7 @@
 					},
 					{
 						name: 'rKeyWord',
-						source: substringMatcher(rKeyWord)
+						source: substringMatcher(rKeyWord.split(","))
 					});
 				});
 			/* #* [E] Document Ready *# */
